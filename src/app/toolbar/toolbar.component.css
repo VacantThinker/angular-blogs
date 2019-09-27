@@ -1,59 +1,69 @@
 .toolbar {
+  min-width: 320px;
   height: 60px;
   padding: 0;
-  border: none;
   background-color: dodgerblue;
   display: flex;
-  flex: 1;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
   align-items: center;
-  /*align-content: center;*/
-  /*text-align: center;*/
-  /*vertical-align: middle;*/
 }
 
 .toolbar a {
   margin: 0 8px;
   text-decoration-line: none;
   color: white;
-  /*background-color: orange;*/
+  /*display: contents;*/
 }
 
-.toolbar a img.headImage {
-  width: 40px;
-  /*margin: 0 16px;*/
-}
-
-.toolbar a img.headImage:hover {
-  /*color: cadetblue;*/
+.headImage a {
   width: 60px;
-  /*height: 50px;*/
+  height: 60px;
+  display: block;
+  /*align-items: center;*/
+  /*text-align: center;*/
+  /*vertical-align: middle;*/
+  justify-items: center;
+}
+
+.headImage .img1 {
+  width: 40px;
+  height: 40px;
+  margin: 10px 0 0 10px;
+  position: absolute;
+  /*display: block;*/
+  z-index: 1;
+  visibility: visible;
+}
+
+.headImage .img2 {
+  width: 60px;
+  height: 60px;
+  /*margin: 0;*/
+  position: absolute;
+  z-index: 2;
+  visibility: hidden;
+}
+
+.headImage a:hover .img1 {
+  visibility: hidden;
+}
+
+.headImage a:hover .img2 {
+  visibility: visible;
+}
+
+.headLink span:hover {
+  font-size: 1.2em;
   text-decoration-line: underline;
 }
 
-.toolbar a span.headLink {
-  /*width: 30px;*/
-  /*height: 30px;*/
-  /*display: inline-flex;*/
-  /*font-size: medium;*/
-  /*flex: 1;*/
-}
-
-.toolbar a span.headLink:hover {
-  font-size: 1.5em;
-  text-decoration-line: underline;
-  /*color: black;*/
-  /*background-color: white;*/
-}
-
-.toolbar div.leftSpace {
+.leftSpace2 {
   flex: 1;
 }
 
-.toolbar a span.githubLink {
-  /*font-size: medium;*/
-}
-
-.toolbar a span.githubLink:hover {
-  font-size: 1.5em;
+.githubLink span:hover {
+  font-size: 1.2em;
   text-decoration-line: underline;
 }
