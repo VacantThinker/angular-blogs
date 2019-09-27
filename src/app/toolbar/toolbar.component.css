@@ -1,0 +1,59 @@
+.toolbar {
+  height: 60px;
+  padding: 0;
+  border: none;
+  background-color: dodgerblue;
+  display: flex;
+  flex: 1;
+  align-items: center;
+  /*align-content: center;*/
+  /*text-align: center;*/
+  /*vertical-align: middle;*/
+}
+
+.toolbar a {
+  margin: 0 8px;
+  text-decoration-line: none;
+  color: white;
+  /*background-color: orange;*/
+}
+
+.toolbar a img.headImage {
+  width: 40px;
+  /*margin: 0 16px;*/
+}
+
+.toolbar a img.headImage:hover {
+  /*color: cadetblue;*/
+  width: 60px;
+  /*height: 50px;*/
+  text-decoration-line: underline;
+}
+
+.toolbar a span.headLink {
+  /*width: 30px;*/
+  /*height: 30px;*/
+  /*display: inline-flex;*/
+  /*font-size: medium;*/
+  /*flex: 1;*/
+}
+
+.toolbar a span.headLink:hover {
+  font-size: 1.5em;
+  text-decoration-line: underline;
+  /*color: black;*/
+  /*background-color: white;*/
+}
+
+.toolbar div.leftSpace {
+  flex: 1;
+}
+
+.toolbar a span.githubLink {
+  /*font-size: medium;*/
+}
+
+.toolbar a span.githubLink:hover {
+  font-size: 1.5em;
+  text-decoration-line: underline;
+}
