@@ -1,8 +1,16 @@
-div.app {
-  margin: -8px;
+.app {
+  /*min-height: 100%;*/
+  /*margin: -8px;*/
   display: grid;
+  box-sizing: border-box;
 }
 
-div.app app-toolbar {
-  height: 100px;
+app-toolbar {
+  grid-row: auto;
+  grid-column: auto;
+}
+
+app-main {
+  grid-row: auto;
+  grid-column: auto;
 }
