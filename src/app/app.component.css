@@ -1,16 +1,14 @@
-.app {
-  /*min-height: 100%;*/
+div.app {
+  min-height: 100vh;
   /*margin: -8px;*/
   display: grid;
-  box-sizing: border-box;
+  /*flex-flow: column nowrap;*/
+  grid-template-columns: 1fr;
+  grid-template-rows: 60px auto;
 }
 
 app-toolbar {
-  grid-row: auto;
-  grid-column: auto;
 }
 
 app-main {
-  grid-row: auto;
-  grid-column: auto;
 }
