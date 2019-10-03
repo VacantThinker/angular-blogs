@@ -1,0 +1,10 @@
+.sort-container {
+  height: 100%;
+  /*background-color: orange;*/
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: 1fr;
+}
+
+
+

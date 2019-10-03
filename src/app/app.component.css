@@ -1,14 +1,24 @@
-div.app {
-  min-height: 100vh;
+#app-container {
+  width: 100%;
+  height: 100%;
   /*margin: -8px;*/
   display: grid;
-  /*flex-flow: column nowrap;*/
+  grid-template-areas: "header-box" "container-box";
+  grid-template-rows: 60px 1fr;
   grid-template-columns: 1fr;
-  grid-template-rows: 60px auto;
 }
 
-app-toolbar {
+app-index-header {
+  grid-area: header-box;
 }
 
-app-main {
+app-index-replace {
+  grid-area: container-box;
 }
+
+/*.app-replace {*/
+/*  !*min-height: 100vh;*!*/
+/*  grid-column: 1 / 2;*/
+/*  grid-row: 0 / 1;*/
+/*}*/
+

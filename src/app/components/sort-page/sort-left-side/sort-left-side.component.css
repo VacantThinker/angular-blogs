@@ -1,0 +1,32 @@
+
+.sort-left-side {
+  /*min-height: 100%;*/
+  /*border-right: 1px solid #63b175;*/
+  /*background-color: dodgerblue;*/
+}
+
+.sort-left-side ul {
+  height: 30px;
+  line-height: 30px;
+  list-style-type: none;
+  text-align: start;
+  text-indent: 10px;
+  /*font-size: 12px;*/
+}
+
+.sort-left-side ul:hover {
+  background-color: #63b175;
+  color: white;
+}
+
+.sort-left-side ul li {
+  padding-right: 10px;
+  /*line-height: 50px;*/
+}
+
+/*.sort-left-side ul li[id="0"] {*/
+/*  background-color: #63b175;*/
+/*  color: white;*/
+/*}*/
+
+

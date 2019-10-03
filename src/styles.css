@@ -5,7 +5,15 @@ html {
 }
 
 body {
-  min-height: 100vh;
-  margin: 0;
+  height: 100vh;
+}
+
+app-root {
+  height: 100%;
+}
+
+html, body, header, nav, footer, div, span, ul, li, ol {
+  border: 0;
   padding: 0;
+  margin: 0;
 }

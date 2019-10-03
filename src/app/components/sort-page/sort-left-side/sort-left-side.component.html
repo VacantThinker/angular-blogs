@@ -1,0 +1,7 @@
+<div class="sort-left-side">
+  <!--  <div *ngFor="let i of [1,2,3,4]">-->
+  <ul *ngFor="let item of sideList; index as index">
+    <li (click)="sendDataToContent(item)" id="{{index}}">{{item}}</li>
+  </ul>
+  <!--  </div>-->
+</div>

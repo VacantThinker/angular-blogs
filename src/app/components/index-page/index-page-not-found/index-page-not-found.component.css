@@ -1,0 +1,17 @@
+.index-page-not-found {
+  height: 100%;
+  display: grid;
+  grid-template-areas: "pageNotFound";
+  /*background-color: crimson;*/
+}
+
+.item {
+  width: 300px;
+  /*height: 200px;*/
+  margin: auto;
+  grid-area: pageNotFound;
+  text-align: center;
+
+  /*color: white;*/
+  font-size: 32px;
+}

@@ -1,8 +1,9 @@
-.header {
+.index-header-container {
   min-width: 320px;
   height: 60px;
+  background-color: #63b175;
+
   padding: 0;
-  background-color: dodgerblue;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -10,7 +11,7 @@
   align-items: center;
 }
 
-.header a {
+.index-header-container a {
   margin: 0 8px;
   text-decoration-line: none;
   color: white;
