@@ -1,8 +1,8 @@
 .home-container {
   height: 100%;
-  /*background-color: hotpink;*/
+  /*width: 100%;*/
 }
 
-.item {
+.home-container .introduce {
   height: 100%;
 }

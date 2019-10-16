@@ -12,10 +12,9 @@ export class TransferDataService {
   constructor() {
   }
 
-  tranferData(data: string) {
-    if (data) {
-      this.remoteDataSubject.next(data);
-      // this.remoteData$ = this.remoteDataSubject.asObservable();
+  tranferData(section: string) {
+    if (section) {
+      this.remoteDataSubject.next(section);
     }
   }
 }

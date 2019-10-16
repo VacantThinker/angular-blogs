@@ -1,5 +1,6 @@
 
-deploy build on angular-blogs-deploy
+##### deploy build on angular-blogs-deploy
+
 ```
 ng build --prod --base-href=https://vt-angular.github.io/angular-blogs-deploy/
 
@@ -7,6 +8,9 @@ ng deploy --base-href=https://vt-angular.github.io/angular-blogs-deploy/ --repo=
 
 ```
 
+##### access the deploy
+
+[https://vt-angular.github.io/angular-blogs-deploy/](https://vt-angular.github.io/angular-blogs-deploy/)
 
 
 

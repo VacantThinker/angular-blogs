@@ -1,20 +1,20 @@
 import {async, ComponentFixture, TestBed} from '@angular/core/testing';
 
-import {SortContentComponent} from './sort-content.component';
+import {SectionContentComponent} from './section-content.component';
 
 describe('MainContentComponent', () => {
-  let component: SortContentComponent;
-  let fixture: ComponentFixture<SortContentComponent>;
+  let component: SectionContentComponent;
+  let fixture: ComponentFixture<SectionContentComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [SortContentComponent]
+      declarations: [SectionContentComponent]
     })
       .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(SortContentComponent);
+    fixture = TestBed.createComponent(SectionContentComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

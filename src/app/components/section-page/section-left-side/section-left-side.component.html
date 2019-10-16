@@ -1,0 +1,10 @@
+<div class="section-left-side">
+  <!--  <div *ngFor="let i of [1,2,3,4]">-->
+  <ul>
+    <li *ngFor="let section of mdArray">
+      <a [routerLink]="[pageArea,section]">
+        {{section}}
+      </a>
+    </li>
+  </ul>
+</div>
