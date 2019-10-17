@@ -14,7 +14,7 @@ export class SectionLeftSideComponent implements OnInit {
   mdArray: Set<string>;
 
   @Input()
-  size: number;
+  size: string;
 
   constructor() {
   }

@@ -10,7 +10,7 @@ import {DataField} from '../../../DataField';
 })
 export class SectionContainerComponent implements OnInit {
 
-  md = DataField.markdownIt;
+  // md = DataField.markdownIt;
   pageArea = DataField.pageSection;
 
   section: string;
@@ -51,7 +51,7 @@ export class SectionContainerComponent implements OnInit {
             this.mdDataService.getMdContent(this.section, this.mdTitle)
               .subscribe(text => {
                 if (text) {
-                  this.mdContent = this.md.render(text);
+                  this.mdContent = this.dealHtml(text);
                 }
               });
           }
@@ -59,6 +59,10 @@ export class SectionContainerComponent implements OnInit {
         }
 
       });
+  }
+
+  private dealHtml(c: string): string {
+    return DataField.getHtmlWithMarkdown(c, 2);
   }
 
 }
