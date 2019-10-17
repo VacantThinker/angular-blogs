@@ -1,7 +1,5 @@
 .section-content {
   height: 100%;
-  /*border-right: 1px solid #63b175;*/
-  /*background-color: dodgerblue;*/
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto 1fr;

@@ -1,5 +1,4 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {DataField} from '../../../DataField';
 
 @Component({
   selector: 'app-section-content',
@@ -8,7 +7,8 @@ import {DataField} from '../../../DataField';
 })
 export class SectionContentComponent implements OnInit {
 
-  pageArea = DataField.pageSection;
+  @Input()
+  pageArea: string;
 
   @Input()
   section: string;

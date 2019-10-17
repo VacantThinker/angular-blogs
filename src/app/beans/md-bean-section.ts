@@ -1,7 +1,7 @@
 export class MdBeanSection {
   constructor(
     public mdList: Set<string>,
-    public size: number,
+    public size: string,
   ) {
   }
 

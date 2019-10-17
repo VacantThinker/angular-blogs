@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core';
+import {DataField} from '../../../DataField';
 
 @Component({
   selector: 'app-index-header',
@@ -6,7 +7,7 @@ import {Component, OnInit} from '@angular/core';
   styleUrls: ['./index-header.component.css']
 })
 export class IndexHeaderComponent implements OnInit {
-  headImageUrl = 'https://raw.githubusercontent.com/vt-server-data/angular-blog-data/master/image/headimage/50100840.png';
+  headImageUrl = DataField.headImageUrl;
 
   constructor() {
   }

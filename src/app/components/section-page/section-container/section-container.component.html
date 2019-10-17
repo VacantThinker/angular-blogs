@@ -1,9 +1,14 @@
 <div class="section-container">
-  <app-section-left-side [mdArray]="mdArray"></app-section-left-side>
+  <app-section-left-side
+    [mdArray]="mdArray"
+    [pageArea]="pageArea"
+  ></app-section-left-side>
   <app-section-content
     [mdContent]="mdContent"
     [mdSectionArray]="mdSectionArray"
-    [section]="section"></app-section-content>
+    [pageArea]="pageArea"
+    [section]="section"
+  ></app-section-content>
 </div>
 
 

@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
-import {MdArrayDataService} from '../../../services/md-array-data.service';
+import {SectionContainerDataService} from '../../../services/section-container-data.service';
 import {DataField} from '../../../DataField';
 
 @Component({
@@ -10,18 +10,19 @@ import {DataField} from '../../../DataField';
 })
 export class SectionContainerComponent implements OnInit {
 
-  md = DataField.md;
+  md = DataField.markdownIt;
+  pageArea = DataField.pageSection;
 
   section: string;
   mdTitle: string;
   mdContent: string;
-  size: number;
+  size: string;
 
   mdArray: Set<string>;
   mdSectionArray: Set<string>;
 
   constructor(
-    private mdDataService: MdArrayDataService,
+    private mdDataService: SectionContainerDataService,
     private route: ActivatedRoute,
   ) {
   }

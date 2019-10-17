@@ -15,16 +15,12 @@
   margin: 0 8px;
   text-decoration-line: none;
   color: white;
-  /*display: contents;*/
 }
 
 .headImage a {
   width: 60px;
   height: 60px;
   display: block;
-  /*align-items: center;*/
-  /*text-align: center;*/
-  /*vertical-align: middle;*/
   justify-items: center;
 }
 
@@ -33,7 +29,6 @@
   height: 40px;
   margin: 10px 0 0 10px;
   position: absolute;
-  /*display: block;*/
   z-index: 1;
   visibility: visible;
 }
@@ -41,7 +36,6 @@
 .headImage .img2 {
   width: 60px;
   height: 60px;
-  /*margin: 0;*/
   position: absolute;
   z-index: 2;
   visibility: hidden;

@@ -6,7 +6,7 @@ import {MdBeanSection} from '../beans/md-bean-section';
 @Injectable({
   providedIn: 'root'
 })
-export class MdArrayDataService {
+export class SectionContainerDataService {
   // templateStr = 'https://raw.githubusercontent.com/vt-angular/angular-blogs-data/master/json_/md_array.json';
 
   private hostName = 'https://raw.githubusercontent.com/';

@@ -18,7 +18,7 @@ export class IndexPageNotFoundComponent implements OnInit, OnDestroy {
     private activatedRoute: ActivatedRoute,
     private titleService: Title,
   ) {
-    this.activatedRoute.paramMap.subscribe((paramMap: ParamMap) => this.titleService.setTitle(paramMap.get('title')));
+    // this.activatedRoute.paramMap.subscribe((paramMap: ParamMap) => this.titleService.setTitle(paramMap.get('title')));
   }
 
   ngOnDestroy(): void {

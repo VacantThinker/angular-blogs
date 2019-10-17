@@ -6,14 +6,13 @@ import {IndexHeaderComponent} from './components/index-page/index-header/index-h
 import {IndexFooterComponent} from './components/index-page/index-footer/index-footer.component';
 import {SectionLeftSideComponent} from './components/section-page/section-left-side/section-left-side.component';
 import {SectionContentComponent} from './components/section-page/section-content/section-content.component';
-import {MdArrayDataService} from './services/md-array-data.service';
+import {SectionContainerDataService} from './services/section-container-data.service';
 import {HttpClientModule} from '@angular/common/http';
 import {SectionContainerComponent} from './components/section-page/section-container/section-container.component';
 import {RouterModule, Routes} from '@angular/router';
 import {IndexReplaceComponent} from './components/index-page/index-replace/index-replace.component';
 import {HomeContainerComponent} from './components/home-page/home-container/home-container.component';
 import {IndexPageNotFoundComponent} from './components/index-page/index-page-not-found/index-page-not-found.component';
-import {FormsModule} from '@angular/forms';
 
 const appRoutes: Routes = [
   {path: '', component: HomeContainerComponent},
@@ -48,7 +47,7 @@ const appRoutes: Routes = [
 
   ],
   providers: [
-    MdArrayDataService,
+    SectionContainerDataService,
   ],
   bootstrap: [AppComponent]
 })
