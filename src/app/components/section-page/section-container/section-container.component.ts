@@ -1,8 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
 import {MdArrayDataService} from '../../../services/md-array-data.service';
-import {TransferDataService} from '../../../services/transfer-data.service';
-import {MdBean} from '../../../beans/md-bean';
 import {DataField} from '../../../DataField';
 
 @Component({
@@ -17,13 +15,13 @@ export class SectionContainerComponent implements OnInit {
   section: string;
   mdTitle: string;
   mdContent: string;
+  size: number;
 
   mdArray: Set<string>;
-  mdSectionArray: Set<MdBean>;
+  mdSectionArray: Set<string>;
 
   constructor(
     private mdDataService: MdArrayDataService,
-    private transferDataService: TransferDataService,
     private route: ActivatedRoute,
   ) {
   }
@@ -36,22 +34,24 @@ export class SectionContainerComponent implements OnInit {
 
     this.route.paramMap
       .subscribe(data => {
-
         if (data.keys.length > 0) {
           this.section = data.get('section');
           this.mdTitle = data.get('mdTitle');
-          console.log('mdtitle=' + this.mdTitle);
+          // console.log('mdtitle=' + this.mdTitle);
 
           this.mdDataService.getMdSectionArray(this.section)
-            .subscribe(arr => {
-              this.mdSectionArray = arr;
+            .subscribe(mdBeanSection => {
+              if (mdBeanSection) {
+                this.mdSectionArray = mdBeanSection.mdList;
+                this.size = mdBeanSection.size;
+              }
             });
-
-          if (this.mdTitle !== 'null') {
+          if (this.mdTitle) {
             this.mdDataService.getMdContent(this.section, this.mdTitle)
               .subscribe(text => {
-                this.mdContent = this.md.render(text);
-                // this.changeDetectorRef.detectChanges();
+                if (text) {
+                  this.mdContent = this.md.render(text);
+                }
               });
           }
 

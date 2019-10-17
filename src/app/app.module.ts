@@ -8,9 +8,8 @@ import {SectionLeftSideComponent} from './components/section-page/section-left-s
 import {SectionContentComponent} from './components/section-page/section-content/section-content.component';
 import {MdArrayDataService} from './services/md-array-data.service';
 import {HttpClientModule} from '@angular/common/http';
-import {TransferDataService} from './services/transfer-data.service';
 import {SectionContainerComponent} from './components/section-page/section-container/section-container.component';
-import {Router, RouterModule, Routes} from '@angular/router';
+import {RouterModule, Routes} from '@angular/router';
 import {IndexReplaceComponent} from './components/index-page/index-replace/index-replace.component';
 import {HomeContainerComponent} from './components/home-page/home-container/home-container.component';
 import {IndexPageNotFoundComponent} from './components/index-page/index-page-not-found/index-page-not-found.component';
@@ -46,13 +45,10 @@ const appRoutes: Routes = [
     HttpClientModule,
 
     RouterModule.forRoot(appRoutes, {enableTracing: false}),
-    FormsModule
 
   ],
   providers: [
     MdArrayDataService,
-    TransferDataService,
-
   ],
   bootstrap: [AppComponent]
 })

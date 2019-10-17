@@ -1,8 +1,7 @@
 import {Injectable} from '@angular/core';
 import {Observable} from 'rxjs';
 import {HttpClient} from '@angular/common/http';
-import {MdBean} from '../beans/md-bean';
-import {init} from 'protractor/built/launcher';
+import {MdBeanSection} from '../beans/md-bean-section';
 
 @Injectable({
   providedIn: 'root'
@@ -32,18 +31,43 @@ export class MdArrayDataService {
 
   // https://raw.githubusercontent.com/vt-server-data/angular-blog-data/master/contents/angular/property-x-is-.md
   getMdContent(section: string, mdTitle: string): Observable<string> {
-    const url = this.mdUrl + section + this.sprit + mdTitle + this.mdSuffix;
-
-    return this.http.get<string>( url, {responseType : 'text' as 'json'});
+    if (section) {
+      if (mdTitle) {
+        const url = this.mdUrl + section + this.sprit + mdTitle + this.mdSuffix;
+        // console.log('getMdContent\n' + url);
+        return this.http.get<string>(url, {responseType: 'text' as 'json'});
+      }
+    }
   }
 
-  getMdSectionArray(section: string): Observable<Set<MdBean>> {
-    const url = this.jsonUrl + this.midfix + this.sprit + section + this.jsonSuffix;
-    return this.http.get<Set<MdBean>>(url);
+  /**
+   * get section item-array .
+   * @param section eg: angular, css, ...
+   * @return MdBeanSection
+   *
+   * @code
+   * {
+   *   "mdList": [
+   *       "the-lengths-of-css",
+   *   ],
+   *   "size": 3
+   * }
+   */
+  getMdSectionArray(section: string): Observable<MdBeanSection> {
+    if (section) {
+      const url = this.jsonUrl + this.midfix + this.sprit + section + this.jsonSuffix;
+      // console.log('getMdSectionArray\n' + url);
+      return this.http.get<MdBeanSection>(url);
+    }
   }
 
+  /**
+   * get md section-array .
+   * @return ["angular", "css", ...]
+   */
   getMdArray(): Observable<Set<string>> {
     const url = this.jsonUrl + this.midfix + this.jsonSuffix;
+    // console.log('getMdArray\n' + url);
     return this.http.get<Set<string>>(url);
   }
 

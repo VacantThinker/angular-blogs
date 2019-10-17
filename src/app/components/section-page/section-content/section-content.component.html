@@ -1,14 +1,14 @@
 <div class="section-content">
 
   <ul>
-    <li *ngFor="let mdBean of mdSectionArray">
-      <a [routerLink]="[pageArea, section, mdBean.mdTitle]">
-        {{mdBean.mdTitle}}
+    <li *ngFor="let mdTitle of mdSectionArray">
+      <a [routerLink]="[pageArea, section, mdTitle]">
+        {{mdTitle}}
       </a>
     </li>
   </ul>
 
-  <div class="section-content-md" *ngIf="mdContent" [innerHTML]="mdContent">
+  <div *ngIf="mdContent" [innerHTML]="mdContent" class="section-content-md">
 
   </div>
 </div>

@@ -1,5 +1,4 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {TransferDataService} from '../../../services/transfer-data.service';
 import {DataField} from '../../../DataField';
 
 @Component({
@@ -14,9 +13,10 @@ export class SectionLeftSideComponent implements OnInit {
   @Input()
   mdArray: Set<string>;
 
-  constructor(
-    private transferDataService: TransferDataService,
-  ) {
+  @Input()
+  size: number;
+
+  constructor() {
   }
 
   ngOnInit() {
