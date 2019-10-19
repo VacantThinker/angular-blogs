@@ -1,15 +1,15 @@
 <div class="index-header-container">
-  <div class="headImage">
-    <a href="https://github.com/VacantThinker" target="_blank">
-      <img alt="head-image" class="img1" src="{{headImageUrl}}"/>
-      <img alt="head-image" class="img2" src="{{headImageUrl}}"/>
-    </a>
-  </div>
-  <div class="leftSpace1"></div>
-  <a class="headLink" routerLink="/">
+  <!--  <div class="headImage">-->
+  <!--    <a href="https://github.com/VacantThinker" target="_blank">-->
+  <!--      <img alt="head-image" class="img1" src="{{headImageUrl}}"/>-->
+  <!--      <img alt="head-image" class="img2" src="{{headImageUrl}}"/>-->
+  <!--    </a>-->
+  <!--  </div>-->
+  <!--  <div class="leftSpace1"></div>-->
+  <a class="sectionLink" routerLink="/">
     <span>主页</span>
   </a>
-  <a class="headLink" routerLink="/section">
+  <a [routerLink]="['section']" class="sectionLink">
     <span>分类</span>
   </a>
 

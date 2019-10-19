@@ -1,11 +1,11 @@
 <div class="section-left-side">
-  <!--  <div *ngFor="let i of [1,2,3,4]">-->
-  <ul>
-    <li *ngFor="let section of mdArray">
-      <a [routerLink]="[pageArea,section]">
-        {{section}}
+
+  <ul *ngIf="mdBeanSet">
+    <li *ngFor="let section of mdBeanSet">
+      <a [routerLink]="[pageArea,section.mdSectName]">
+        {{section.mdSectName}}<span> {{section.mdListSize}}</span>
       </a>
-      <span hidden="hidden">{{size}}</span>
     </li>
   </ul>
+
 </div>

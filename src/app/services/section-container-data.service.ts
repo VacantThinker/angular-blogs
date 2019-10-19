@@ -1,7 +1,7 @@
 import {Injectable} from '@angular/core';
 import {Observable} from 'rxjs';
 import {HttpClient} from '@angular/common/http';
-import {MdBeanSection} from '../beans/md-bean-section';
+import {MdSection} from '../beans/md-section';
 
 @Injectable({
   providedIn: 'root'
@@ -19,9 +19,10 @@ export class SectionContainerDataService {
   private httpPreUrl = this.hostName + this.organizationName + this.repositoryName + this.branchName;
   private mdUrl = this.httpPreUrl + this.mdFolderName;
   private jsonUrl = this.httpPreUrl + this.jsonFolderName;
-  private midfix = 'md_array';
+  private midfix = 'md_section';
   private jsonSuffix = '.json';
   private mdSuffix = '.md';
+  private listSuffix = '.list';
   private sprit = '/';
 
   constructor( // the service, dont execute ngOnInit() method.
@@ -43,21 +44,12 @@ export class SectionContainerDataService {
   /**
    * get section item-array .
    * @param section eg: angular, css, ...
-   * @return MdBeanSection
-   *
-   * @code
-   * {
-   *   "mdList": [
-   *       "the-lengths-of-css",
-   *   ],
-   *   "size": 3
-   * }
+   * @return MdSectionSet
    */
-  getMdSectionArray(section: string): Observable<MdBeanSection> {
+  getMdSectionSet(section: string): Observable<Set<string>> {
     if (section) {
-      const url = this.jsonUrl + this.midfix + this.sprit + section + this.jsonSuffix;
-      // console.log('getMdSectionArray\n' + url);
-      return this.http.get<MdBeanSection>(url);
+      const url = this.jsonUrl + this.midfix + this.sprit + section ;
+      return this.http.get<Set<string>>(url);
     }
   }
 
@@ -65,10 +57,10 @@ export class SectionContainerDataService {
    * get md section-array .
    * @return ["angular", "css", ...]
    */
-  getMdArray(): Observable<Set<string>> {
-    const url = this.jsonUrl + this.midfix + this.jsonSuffix;
+  getMdBeanSet(): Observable<Set<MdSection>> {
+    const url = this.jsonUrl + this.midfix + this.listSuffix;
     // console.log('getMdArray\n' + url);
-    return this.http.get<Set<string>>(url);
+    return this.http.get<Set<MdSection>>(url);
   }
 
 }

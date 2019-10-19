@@ -12,13 +12,17 @@ export class SectionContentComponent implements OnInit {
 
   @Input()
   section: string;
-  @Input()
-  mdSectionArray: Set<string>;
 
   @Input()
-  mdContent: string;
+  mdSectionSet: Set<string>;
+
+  @Input()
+  mdHtml: string;
 
   constructor() {
+    // if (this.mdSectionSet) {
+    //   this.mSet = this.mdSectionSet.mdList;
+    // }
   }
 
   ngOnInit() {

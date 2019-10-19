@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
 import {SectionContainerDataService} from '../../../services/section-container-data.service';
 import {DataField} from '../../../DataField';
+import {MdSection} from '../../../beans/md-section';
 
 @Component({
   selector: 'app-section-container',
@@ -10,27 +11,27 @@ import {DataField} from '../../../DataField';
 })
 export class SectionContainerComponent implements OnInit {
 
-  // md = DataField.markdownIt;
   pageArea = DataField.pageSection;
 
   section: string;
   mdTitle: string;
-  mdContent: string;
-  size: string;
+  mdHtml: string;
 
-  mdArray: Set<string>;
-  mdSectionArray: Set<string>;
+  mdSectionSet: Set<string>;
+  mdBeanSet: Set<MdSection>;
 
   constructor(
-    private mdDataService: SectionContainerDataService,
+    private sectionContainerDataService: SectionContainerDataService,
     private route: ActivatedRoute,
   ) {
   }
 
   ngOnInit() {
-    this.mdDataService.getMdArray()
-      .subscribe(mdArray => {
-        this.mdArray = mdArray;
+    this.sectionContainerDataService.getMdBeanSet()
+      .subscribe(list => {
+        if (list) {
+          this.mdBeanSet = list;
+        }
       });
 
     this.route.paramMap
@@ -40,18 +41,17 @@ export class SectionContainerComponent implements OnInit {
           this.mdTitle = data.get('mdTitle');
           // console.log('mdtitle=' + this.mdTitle);
 
-          this.mdDataService.getMdSectionArray(this.section)
-            .subscribe(mdBeanSection => {
-              if (mdBeanSection) {
-                this.mdSectionArray = mdBeanSection.mdList;
-                this.size = mdBeanSection.size;
+          this.sectionContainerDataService.getMdSectionSet(this.section)
+            .subscribe(list => {
+              if (list) {
+                this.mdSectionSet = list;
               }
             });
           if (this.mdTitle) {
-            this.mdDataService.getMdContent(this.section, this.mdTitle)
+            this.sectionContainerDataService.getMdContent(this.section, this.mdTitle)
               .subscribe(text => {
                 if (text) {
-                  this.mdContent = this.dealHtml(text);
+                  this.mdHtml = this.dealHtml(text);
                 }
               });
           }
@@ -62,7 +62,7 @@ export class SectionContainerComponent implements OnInit {
   }
 
   private dealHtml(c: string): string {
-    return DataField.getHtmlWithMarkdown(c, 2);
+    return DataField.getHtmlWithMarkdown(c, 1);
   }
 
 }

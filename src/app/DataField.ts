@@ -1,6 +1,6 @@
 import Showdown from 'showdown';
 import MarkdownIt from 'markdown-it';
-import {from, Observable} from 'rxjs';
+import {Observable} from 'rxjs';
 
 // import hljs from 'highlight.js'; // https://highlightjs.org/
 

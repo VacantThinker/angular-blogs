@@ -15,7 +15,8 @@ import {HomeContainerComponent} from './components/home-page/home-container/home
 import {IndexPageNotFoundComponent} from './components/index-page/index-page-not-found/index-page-not-found.component';
 
 const appRoutes: Routes = [
-  {path: '', component: HomeContainerComponent},
+  {path: '', redirectTo: 'section', pathMatch: 'full'},
+
   {path: 'section', component: SectionContainerComponent},
   {path: 'section/:section', component: SectionContainerComponent},
   {path: 'section/:section/:mdTitle', component: SectionContainerComponent},

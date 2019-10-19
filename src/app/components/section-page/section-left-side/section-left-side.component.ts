@@ -1,4 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
+import {MdSection} from '../../../beans/md-section';
 
 @Component({
   selector: 'app-section-left-side',
@@ -11,12 +12,12 @@ export class SectionLeftSideComponent implements OnInit {
   pageArea: string;
 
   @Input()
-  mdArray: Set<string>;
-
-  @Input()
-  size: string;
+  mdBeanSet: Set<MdSection>;
 
   constructor() {
+    // if (this.mdBeanSet) {
+    //   this.mSet = this.mdBeanSet.mdBeanSet;
+    // }
   }
 
   ngOnInit() {

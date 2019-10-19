@@ -1,12 +1,10 @@
 .index-header-container {
-  min-width: 320px;
+  /*min-width: 320px;*/
   height: 60px;
   background-color: #63b175;
 
-  padding: 0;
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  flex-flow: row nowrap;
   justify-content: center;
   align-items: center;
 }
@@ -17,39 +15,39 @@
   color: white;
 }
 
-.headImage a {
-  width: 60px;
-  height: 60px;
-  display: block;
-  justify-items: center;
-}
+/*.headImage a {*/
+/*  width: 60px;*/
+/*  height: 60px;*/
+/*  display: block;*/
+/*  justify-items: center;*/
+/*}*/
 
-.headImage .img1 {
-  width: 40px;
-  height: 40px;
-  margin: 10px 0 0 10px;
-  position: absolute;
-  z-index: 1;
-  visibility: visible;
-}
+/*.headImage .img1 {*/
+/*  width: 40px;*/
+/*  height: 40px;*/
+/*  margin: 10px 0 0 10px;*/
+/*  position: absolute;*/
+/*  z-index: 1;*/
+/*  visibility: visible;*/
+/*}*/
 
-.headImage .img2 {
-  width: 60px;
-  height: 60px;
-  position: absolute;
-  z-index: 2;
-  visibility: hidden;
-}
+/*.headImage .img2 {*/
+/*  width: 60px;*/
+/*  height: 60px;*/
+/*  position: absolute;*/
+/*  z-index: 2;*/
+/*  visibility: hidden;*/
+/*}*/
 
-.headImage a:hover .img1 {
-  visibility: hidden;
-}
+/*.headImage a:hover .img1 {*/
+/*  visibility: hidden;*/
+/*}*/
 
-.headImage a:hover .img2 {
-  visibility: visible;
-}
+/*.headImage a:hover .img2 {*/
+/*  visibility: visible;*/
+/*}*/
 
-.headLink span:hover {
+.sectionLink span:hover {
   font-size: 1.2em;
   text-decoration-line: underline;
 }
@@ -58,7 +56,7 @@
   flex: 1;
 }
 
-.githubLink span:hover {
-  font-size: 1.2em;
-  text-decoration-line: underline;
-}
+/*.githubLink span:hover {*/
+/*  font-size: 1.2em;*/
+/*  text-decoration-line: underline;*/
+/*}*/
