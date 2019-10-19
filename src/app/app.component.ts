@@ -1,5 +1,4 @@
 import {Component, OnInit} from '@angular/core';
-import {SectionContainerDataService} from './services/section-container-data.service';
 
 @Component({
   selector: 'app-root',
@@ -8,8 +7,7 @@ import {SectionContainerDataService} from './services/section-container-data.ser
 })
 export class AppComponent implements OnInit {
 
-  constructor(
-  ) {
+  constructor() {
   }
 
   ngOnInit(): void {

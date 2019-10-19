@@ -1,10 +1,10 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {ChangeDetectionStrategy, Component, Input, OnInit} from '@angular/core';
 import {MdSection} from '../../../beans/md-section';
 
 @Component({
   selector: 'app-section-left-side',
   templateUrl: './section-left-side.component.html',
-  styleUrls: ['./section-left-side.component.css']
+  styleUrls: ['./section-left-side.component.css'],
 })
 export class SectionLeftSideComponent implements OnInit {
 

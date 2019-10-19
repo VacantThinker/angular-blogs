@@ -5,13 +5,13 @@
 
   display: grid;
   grid-template-rows: 1fr;
-  grid-template-columns: 210px 1fr;
+  grid-template-columns: auto 1fr;
   grid-template-areas: "leftArea contentArea";
 
   position: fixed;
   top: 0;
   right: 0;
-  /*bottom: 0;*/
+  bottom: 0;
   left: 0;
 }
 
@@ -23,14 +23,13 @@ app-section-left-side, app-section-content {
   /*bottom: 0;*/
 
   overflow-y: scroll;
-  /*scrollbar-color: red;*/
-  /*scrollbar-width: thin;*/
+  scrollbar-color: red;
+  scrollbar-width: thin;
 }
 
 app-section-left-side {
   grid-area: leftArea;
-  /*flex-basis: 210px;*/
-  min-width: 210px;
+  /*min-width: 240px;*/
 }
 
 app-section-content {

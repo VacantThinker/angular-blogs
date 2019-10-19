@@ -20,12 +20,12 @@
 }
 
 .section-left-side ul li {
-  /*padding-right: 10px;*/
   line-height: 30px;
 }
 
 .section-left-side ul li a {
   /*width: 100%;*/
+  padding-right: 10px;
   display: block;
 }
 

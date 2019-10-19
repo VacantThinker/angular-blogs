@@ -7,7 +7,7 @@ import {MdSection} from '../../../beans/md-section';
 @Component({
   selector: 'app-section-container',
   templateUrl: './section-container.component.html',
-  styleUrls: ['./section-container.component.css']
+  styleUrls: ['./section-container.component.css'],
 })
 export class SectionContainerComponent implements OnInit {
 
@@ -28,9 +28,11 @@ export class SectionContainerComponent implements OnInit {
 
   ngOnInit() {
     this.sectionContainerDataService.getMdBeanSet()
-      .subscribe(list => {
-        if (list) {
-          this.mdBeanSet = list;
+      .subscribe({
+        next: list => {
+          if (list) {
+            this.mdBeanSet = list;
+          }
         }
       });
 

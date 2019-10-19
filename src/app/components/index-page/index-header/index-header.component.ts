@@ -7,7 +7,7 @@ import {DataField} from '../../../DataField';
   styleUrls: ['./index-header.component.css']
 })
 export class IndexHeaderComponent implements OnInit {
-  headImageUrl = DataField.headImageUrl;
+  // headImageUrl = DataField.headImageUrl;
 
   constructor() {
   }

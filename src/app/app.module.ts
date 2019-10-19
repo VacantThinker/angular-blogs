@@ -13,13 +13,33 @@ import {RouterModule, Routes} from '@angular/router';
 import {IndexReplaceComponent} from './components/index-page/index-replace/index-replace.component';
 import {HomeContainerComponent} from './components/home-page/home-container/home-container.component';
 import {IndexPageNotFoundComponent} from './components/index-page/index-page-not-found/index-page-not-found.component';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 const appRoutes: Routes = [
-  {path: '', redirectTo: 'section', pathMatch: 'full'},
+  // {path: '', redirectTo: 'section', pathMatch: 'full'},
+  {path: '',
+    component: HomeContainerComponent,
+  data: {
+    animation: 'HomePage'
+  }},
 
-  {path: 'section', component: SectionContainerComponent},
-  {path: 'section/:section', component: SectionContainerComponent},
-  {path: 'section/:section/:mdTitle', component: SectionContainerComponent},
+  {
+    path: 'section',
+    component: SectionContainerComponent,
+    data: {
+      animation: 'SectionPage'
+    }
+  },
+  {
+    path: 'section/:section',
+    component: SectionContainerComponent,
+    data: {animation: 'SectionLeftPage'}
+  },
+  {
+    path: 'section/:section/:mdTitle',
+    component: SectionContainerComponent,
+    data: {animation: 'SectionContentPage'}
+  },
 
   {path: '**', component: IndexPageNotFoundComponent},
 ];
@@ -41,9 +61,13 @@ const appRoutes: Routes = [
 
   ],
   imports: [
+    // browser 默认浏览器
     BrowserModule,
+    // browser animation 浏览器动画
+    BrowserAnimationsModule,
+    // httpclient HTTP请求
     HttpClientModule,
-
+    // route 导航
     RouterModule.forRoot(appRoutes, {enableTracing: false}),
 
   ],

@@ -1,3 +1,6 @@
-<div class="index-replace">
-  <router-outlet></router-outlet>
+<div
+  class="index-replace"
+  [@routeAnimations]="prepareRoute(outlet)"
+>
+  <router-outlet #outlet="outlet"></router-outlet>
 </div>

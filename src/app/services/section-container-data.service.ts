@@ -48,7 +48,7 @@ export class SectionContainerDataService {
    */
   getMdSectionSet(section: string): Observable<Set<string>> {
     if (section) {
-      const url = this.jsonUrl + this.midfix + this.sprit + section ;
+      const url = this.jsonUrl + this.midfix + this.sprit + section;
       return this.http.get<Set<string>>(url);
     }
   }
