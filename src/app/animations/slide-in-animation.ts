@@ -2,6 +2,31 @@ import {animate, animateChild, group, query, style, transition, trigger} from '@
 
 export const slideInAnimation =
   trigger('routeAnimations', [
+    transition('HomePage <=> SectionPage', [
+      style({position: 'relative'}),
+      query(':enter, :leave', [
+        style({
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          width: '100%'
+        })
+      ]),
+      query(':enter', [
+        style({left: '-100%'})
+      ]),
+      query(':leave', animateChild()),
+      group([
+        query(':leave', [
+          animate('300ms ease-out', style({left: '100%'}))
+        ]),
+        query(':enter', [
+          animate('300ms ease-out', style({left: '0%'}))
+        ])
+      ]),
+      query(':enter', animateChild()),
+    ]),
+
     // transition('HomePage <=> SectionPage', [
     //   style({ position: 'relative' }),
     //   query(':enter, :leave', [
@@ -18,7 +43,7 @@ export const slideInAnimation =
     //   query(':leave', animateChild()),
     //   group([
     //     query(':leave', [
-    //       animate('300ms ease-out', style({ left: '100%'}))
+    //       animate('200ms ease-out', style({ left: '100%'}))
     //     ]),
     //     query(':enter', [
     //       animate('300ms ease-out', style({ left: '0%'}))
@@ -26,33 +51,8 @@ export const slideInAnimation =
     //   ]),
     //   query(':enter', animateChild()),
     // ]),
-
-    transition('HomePage <=> SectionPage', [
-      style({ position: 'relative' }),
-      query(':enter, :leave', [
-        style({
-          position: 'absolute',
-          top: 0,
-          left: 0,
-          width: '100%'
-        })
-      ]),
-      query(':enter', [
-        style({ left: '-100%'})
-      ]),
-      query(':leave', animateChild()),
-      group([
-        query(':leave', [
-          animate('200ms ease-out', style({ left: '100%'}))
-        ]),
-        query(':enter', [
-          animate('300ms ease-out', style({ left: '0%'}))
-        ])
-      ]),
-      query(':enter', animateChild()),
-    ]),
     transition('SectionPage <=> SectionLeftPage', [
-      style({ position: 'relative' }),
+      style({position: 'relative'}),
       query(':enter, :leave', [
         style({
           position: 'absolute',
@@ -62,21 +62,21 @@ export const slideInAnimation =
         })
       ]),
       query(':enter', [
-        style({ left: '-100%'})
+        style({left: '-100%'})
       ]),
       query(':leave', animateChild()),
       group([
         query(':leave', [
-          animate('200ms ease-out', style({ left: '100%'}))
+          animate('200ms ease-out', style({left: '100%'}))
         ]),
         query(':enter', [
-          animate('300ms ease-out', style({ left: '0%'}))
+          animate('300ms ease-out', style({left: '0%'}))
         ])
       ]),
       query(':enter', animateChild()),
     ]),
     transition('SectionLeftPage <=> SectionContentPage', [
-      style({ position: 'relative' }),
+      style({position: 'relative'}),
       query(':enter, :leave', [
         style({
           position: 'absolute',
@@ -86,15 +86,15 @@ export const slideInAnimation =
         })
       ]),
       query(':enter', [
-        style({ left: '-100%'})
+        style({left: '-100%'})
       ]),
       query(':leave', animateChild()),
       group([
         query(':leave', [
-          animate('200ms ease-out', style({ left: '100%'}))
+          animate('200ms ease-out', style({left: '100%'}))
         ]),
         query(':enter', [
-          animate('300ms ease-out', style({ left: '0%'}))
+          animate('300ms ease-out', style({left: '0%'}))
         ])
       ]),
       query(':enter', animateChild()),

@@ -17,11 +17,13 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 const appRoutes: Routes = [
   // {path: '', redirectTo: 'section', pathMatch: 'full'},
-  {path: '',
+  {
+    path: '',
     component: HomeContainerComponent,
-  data: {
-    animation: 'HomePage'
-  }},
+    data: {
+      animation: 'HomePage'
+    }
+  },
 
   {
     path: 'section',

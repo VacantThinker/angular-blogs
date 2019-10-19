@@ -1,5 +1,4 @@
 import {Component, OnInit} from '@angular/core';
-import {DataField} from '../../../DataField';
 
 @Component({
   selector: 'app-index-header',
