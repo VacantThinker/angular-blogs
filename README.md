@@ -1,10 +1,14 @@
 
 ##### deploy build on angular-blogs-deploy
 
-```
+```cmd
 ng build --prod --base-href=https://vt-angular.github.io/angular-blogs-deploy/
+```
 
+
+```cmd
 ng deploy --base-href=https://vt-angular.github.io/angular-blogs-deploy/ --repo=https://github.com/vt-angular/angular-blogs-deploy.git
+
 
 ```
 

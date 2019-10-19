@@ -64,7 +64,7 @@ export class SectionContainerComponent implements OnInit {
   }
 
   private dealHtml(c: string): string {
-    return DataField.getHtmlWithMarkdown(c, 1);
+    return DataField.getHtmlUseMarkdownByShowdown(c);
   }
 
 }
