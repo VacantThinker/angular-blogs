@@ -1,0 +1,13 @@
+<div class="section-main-nav">
+
+  <ul class="section-main-nav-ul">
+    <li>{{message}}</li>
+    <li *ngFor="let mdTitle of mdTitleSet">
+      <a
+        (click)="mdTitleClick(mdTitle)">
+        {{mdTitle}}
+      </a>
+    </li>
+  </ul>
+
+</div>

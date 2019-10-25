@@ -7,7 +7,7 @@ ng build --prod --base-href=https://vt-angular.github.io/angular-blogs-deploy/
 
 
 ```cmd
-ng deploy --base-href=https://vt-angular.github.io/angular-blogs-deploy/ --repo=https://github.com/vt-angular/angular-blogs-deploy.git
+ng deploy --aot --base-href=https://vt-angular.github.io/angular-blogs-deploy/ --repo=https://github.com/vt-angular/angular-blogs-deploy.git
 
 
 ```

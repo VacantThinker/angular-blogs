@@ -1,5 +1,6 @@
 /**
- * @param mdSection string
+ * eg: { "mdSectName" : "angular", "mdListSize" : 6 }
+ * @param mdSectName string
  * @param mdListSize string
  */
 export class MdSection {

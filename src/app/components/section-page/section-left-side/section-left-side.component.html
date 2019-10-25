@@ -1,8 +1,9 @@
 <div class="section-left-side">
 
-  <ul *ngIf="mdBeanSet">
-    <li *ngFor="let section of mdBeanSet">
-      <a [routerLink]="[pageArea,section.mdSectName]">
+  <ul>
+    <li *ngFor="let section of mdSectionSet">
+      <a
+        (click)="mdSectionClick(section)">
         {{section.mdSectName}}<span> {{section.mdListSize}}</span>
       </a>
     </li>

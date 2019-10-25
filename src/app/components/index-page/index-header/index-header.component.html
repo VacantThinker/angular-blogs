@@ -6,11 +6,20 @@
   <!--    </a>-->
   <!--  </div>-->
   <!--  <div class="leftSpace1"></div>-->
-  <a [routerLink]="['']" class="sectionLink">
-    <span>主页</span>
-  </a>
-  <a [routerLink]="['section']" class="sectionLink">
-    <span>分类</span>
+  <!--  <a [routerLink]="['']" class="sectionLink">-->
+  <!--    <span>主页</span>-->
+  <!--  </a>-->
+  <!--  <a [routerLink]="['section']" class="sectionLink">-->
+  <!--    <span>分类</span>-->
+  <!--  </a>-->
+
+  <a
+    (click)="beanClick(bean)"
+    *ngFor="let bean of beanRouteSet"
+    [routerLink]="[bean.routeUrl]"
+    class="sectionLink"
+  >
+    <span>{{bean.routeName}}</span>
   </a>
 
   <div class="leftSpace2"></div>

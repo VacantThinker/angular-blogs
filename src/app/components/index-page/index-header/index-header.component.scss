@@ -7,12 +7,23 @@
   flex-flow: row nowrap;
   justify-content: center;
   align-items: center;
-}
 
-.index-header-container a {
-  margin: 0 8px;
-  text-decoration-line: none;
-  color: white;
+  a {
+    margin: 0 8px;
+    text-decoration-line: none;
+    color: white;
+  }
+
+  .sectionLink {
+    span:hover {
+      font-size: 1.2em;
+      text-decoration-line: underline;
+    }
+  }
+
+  .leftSpace2 {
+    flex: 1;
+  }
 }
 
 /*.headImage a {*/
@@ -47,14 +58,6 @@
 /*  visibility: visible;*/
 /*}*/
 
-.sectionLink span:hover {
-  font-size: 1.2em;
-  text-decoration-line: underline;
-}
-
-.leftSpace2 {
-  flex: 1;
-}
 
 /*.githubLink span:hover {*/
 /*  font-size: 1.2em;*/

@@ -1,0 +1,30 @@
+.section-left-side {
+  height: 100%;
+
+  ul {
+    height: 30px;
+    line-height: 30px;
+
+    text-align: start;
+    text-indent: 10px;
+    /*font-size: 12px;*/
+    li {
+      line-height: 30px;
+
+      a {
+        width: 100%;
+        padding-right: 10px;
+        display: block;
+      }
+
+      a:hover {
+        background-color: #63b175;
+        color: white;
+      }
+    }
+  }
+
+}
+
+
+

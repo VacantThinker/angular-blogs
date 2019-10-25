@@ -5,7 +5,7 @@ import {slideInAnimation} from '../../../animations/slide-in-animation';
 @Component({
   selector: 'app-index-replace',
   templateUrl: './index-replace.component.html',
-  styleUrls: ['./index-replace.component.css'],
+  styleUrls: ['./index-replace.component.scss'],
   animations: [
     slideInAnimation
   ],

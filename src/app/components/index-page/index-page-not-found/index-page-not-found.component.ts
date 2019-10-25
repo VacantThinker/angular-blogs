@@ -7,7 +7,7 @@ import {Title} from '@angular/platform-browser';
 @Component({
   selector: 'app-index-page-not-found',
   templateUrl: './index-page-not-found.component.html',
-  styleUrls: ['./index-page-not-found.component.css']
+  styleUrls: ['./index-page-not-found.component.scss']
 })
 export class IndexPageNotFoundComponent implements OnInit, OnDestroy {
   content = 'page not found';

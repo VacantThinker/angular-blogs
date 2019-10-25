@@ -1,70 +1,28 @@
 import {Component, OnInit} from '@angular/core';
-import {ActivatedRoute} from '@angular/router';
-import {SectionContainerDataService} from '../../../services/section-container-data.service';
-import {DataField} from '../../../DataField';
-import {MdSection} from '../../../beans/md-section';
+import {SectionHttpDataService} from '../../../services/section-http-data.service';
+import {SectionSendDataService} from '../../../services/section-send-data.service';
 
 @Component({
   selector: 'app-section-container',
   templateUrl: './section-container.component.html',
-  styleUrls: ['./section-container.component.css'],
+  styleUrls: ['./section-container.component.scss'],
 })
 export class SectionContainerComponent implements OnInit {
 
-  pageArea = DataField.pageSection;
-
-  section: string;
-  mdTitle: string;
-  mdHtml: string;
-
-  mdSectionSet: Set<string>;
-  mdBeanSet: Set<MdSection>;
-
   constructor(
-    private sectionContainerDataService: SectionContainerDataService,
-    private route: ActivatedRoute,
+    private sectionSendDataService: SectionSendDataService,
+    private sectionHttpDataService: SectionHttpDataService,
   ) {
   }
 
   ngOnInit() {
-    this.sectionContainerDataService.getMdBeanSet()
+    this.sectionHttpDataService.getMdBeanSet()
       .subscribe({
-        next: list => {
-          if (list) {
-            this.mdBeanSet = list;
-          }
+        next: value => {
+          this.sectionSendDataService.sendMdSectionSetData(value);
         }
       });
 
-    this.route.paramMap
-      .subscribe(data => {
-        if (data.keys.length > 0) {
-          this.section = data.get('section');
-          this.mdTitle = data.get('mdTitle');
-          // console.log('mdtitle=' + this.mdTitle);
-
-          this.sectionContainerDataService.getMdSectionSet(this.section)
-            .subscribe(list => {
-              if (list) {
-                this.mdSectionSet = list;
-              }
-            });
-          if (this.mdTitle) {
-            this.sectionContainerDataService.getMdContent(this.section, this.mdTitle)
-              .subscribe(text => {
-                if (text) {
-                  this.mdHtml = this.dealHtml(text);
-                }
-              });
-          }
-
-        }
-
-      });
-  }
-
-  private dealHtml(c: string): string {
-    return DataField.getHtmlUseMarkdownByShowdown(c);
   }
 
 }
