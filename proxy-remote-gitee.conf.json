@@ -1,0 +1,11 @@
+{
+  "/api/md": {
+    "target": "https://gitee.com/ll-serverdata/spring-boot-angular-blog-data/raw/master",
+    "secure": false,
+    "pathRewrite": {
+      "^/api/md": "/api/md"
+    },
+    "logLevel": "debug",
+    "changeOrigin": true
+  }
+}

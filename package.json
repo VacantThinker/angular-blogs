@@ -6,6 +6,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
+    "start proxy-remote-gitee": "ng serve --proxy-config proxy-remote-gitee.conf.json",
     "start proxy-remote-github": "ng serve --proxy-config proxy-remote-github.conf.json",
     "start proxy-local-spring": "ng serve --proxy-config proxy-local-spring.conf.json",
     "build": "ng build --prod --aot",
