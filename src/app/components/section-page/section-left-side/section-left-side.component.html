@@ -1,10 +1,11 @@
 <div class="section-left-side">
 
-  <ul>
+  <ul *ngIf="mdSectionSet">
     <li *ngFor="let section of mdSectionSet">
       <a
         (click)="mdSectionClick(section)">
-        {{section.mdSectName}}<span> {{section.mdListSize}}</span>
+        {{section.mdSectName}}
+        <span> {{section.mdListSize}}</span>
       </a>
     </li>
   </ul>

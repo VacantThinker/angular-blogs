@@ -3,7 +3,7 @@
 
   display: grid;
   grid-template-rows: 60px auto 1fr;
-  grid-template-columns: auto 1fr;
+  grid-template-columns: 240px 1fr;
   grid-template-areas: "blankArea blankArea" "leftArea navArea" "leftArea contentArea";
 
   position: fixed;
@@ -22,7 +22,7 @@
     //position: relative;
     overflow-y: scroll;
     overflow-x: hidden;
-    scrollbar-color: red;
+    //scrollbar-color: red;
     scrollbar-width: thin;
   }
 
@@ -39,7 +39,7 @@
     min-height: 30px;
     //position: relative;
     overflow-y: scroll;
-    scrollbar-color: red;
+    //scrollbar-color: red;
     scrollbar-width: thin;
   }
 
@@ -52,7 +52,7 @@
   }
 
   app-section-left-side::-webkit-scrollbar-thumb, app-section-main-content::-webkit-scrollbar-thumb {
-    background-color: #63b175;
+    background-color: darkorange;
     outline: 10px solid red;
   }
 

@@ -9,16 +9,20 @@
     text-indent: 10px;
     /*font-size: 12px;*/
     li {
+      background-color: #3f51b5;
       line-height: 30px;
 
       a {
         width: 100%;
+        overflow-x: hidden;
+        overflow-y: hidden;
         padding-right: 10px;
         display: block;
+        color: white;
       }
 
       a:hover {
-        background-color: #63b175;
+        background-color: darkorange;
         color: white;
       }
     }

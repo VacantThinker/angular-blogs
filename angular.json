@@ -73,8 +73,7 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "angular-blogs:build",
-            "proxyConfig": "proxy-remote-github.conf.json"
+            "browserTarget": "angular-blogs:build"
           },
           "configurations": {
             "production": {

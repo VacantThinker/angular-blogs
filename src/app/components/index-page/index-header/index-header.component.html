@@ -1,4 +1,4 @@
-<div class="index-header-container">
+<div class="index-header">
   <!--  <div class="headImage">-->
   <!--    <a href="https://github.com/VacantThinker" target="_blank">-->
   <!--      <img alt="head-image" class="img1" src="{{headImageUrl}}"/>-->
@@ -14,12 +14,13 @@
   <!--  </a>-->
 
   <a
-    (click)="beanClick(bean)"
     *ngFor="let bean of beanRouteSet"
     [routerLink]="[bean.routeUrl]"
     class="sectionLink"
   >
-    <span>{{bean.routeName}}</span>
+    <span
+      (click)="routeNameClick(bean)"
+    >{{bean.routeName}}</span>
   </a>
 
   <div class="leftSpace2"></div>
@@ -28,3 +29,4 @@
   <!--    <span>Github</span>-->
   <!--  </a>-->
 </div>
+

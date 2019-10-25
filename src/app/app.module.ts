@@ -4,7 +4,6 @@ import {RouterModule, Routes} from '@angular/router';
 import {SectionMainNavComponent} from './components/section-page/section-main-nav/section-main-nav.component';
 import {SectionMainContentComponent} from './components/section-page/section-main-content/section-main-content.component';
 import {SectionContainerComponent} from './components/section-page/section-container/section-container.component';
-import {SectionHttpDataService} from './services/section-http-data.service';
 import {NgModule} from '@angular/core';
 import {FormsModule} from '@angular/forms';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
@@ -15,9 +14,9 @@ import {IndexPageNotFoundComponent} from './components/index-page/index-page-not
 import {IndexFooterComponent} from './components/index-page/index-footer/index-footer.component';
 import {AppComponent} from './app.component';
 import {IndexBlankComponent} from './components/index-page/index-blank/index-blank.component';
-import {SectionSendDataService} from './services/section-send-data.service';
 import {HttpClient, HttpClientModule} from '@angular/common/http';
 import {MarkdownModule, MarkedOptions} from 'ngx-markdown';
+import {IndexLoadingComponent} from './components/index-page/index-loading/index-loading.component';
 
 const appRoutes: Routes = [
   {path: '', component: HomeContainerComponent, data: {animation: 'HomePage'}},
@@ -39,6 +38,7 @@ const appRoutes: Routes = [
     IndexFooterComponent,
     IndexReplaceComponent,
     IndexPageNotFoundComponent,
+    IndexBlankComponent,
 
     HomeContainerComponent,
 
@@ -46,7 +46,7 @@ const appRoutes: Routes = [
     SectionMainNavComponent,
     SectionContainerComponent,
     SectionMainContentComponent,
-    IndexBlankComponent,
+    IndexLoadingComponent,
 
   ],
   imports: [
@@ -73,8 +73,7 @@ const appRoutes: Routes = [
     ),
 
   ],
-  providers: [
-  ],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule {

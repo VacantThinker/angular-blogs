@@ -1,0 +1,23 @@
+#app-container {
+  height: 100%;
+  display: grid;
+  grid-template-rows: 60px 1fr;
+  grid-template-columns: 1fr;
+  grid-template-areas: "headerArea" "containerArea";
+
+  app-index-loading {
+
+  }
+
+  app-index-header {
+    grid-area: headerArea;
+    z-index: 2;
+  }
+
+  app-index-replace {
+    grid-area: containerArea;
+    z-index: 1;
+  }
+}
+
+

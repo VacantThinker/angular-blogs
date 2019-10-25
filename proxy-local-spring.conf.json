@@ -5,6 +5,7 @@
     "pathRewrite": {
       "^/api/md": "/api/md"
     },
-    "logLevel": "debug"
+    "logLevel": "debug",
+    "changeOrigin": true
   }
 }

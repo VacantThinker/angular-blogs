@@ -1,4 +1,4 @@
-<div class="section-main-content">
-<!--  <div [innerHTML]="mdContent" class="section-content-md-div"></div>-->
+<div class="section-main-content" *ngIf="mdContent">
+  <!--  <div [innerHTML]="mdContent" class="section-content-md-div"></div>-->
   <markdown [data]="mdContent" class="section-content-md-div"></markdown>
 </div>

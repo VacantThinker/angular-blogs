@@ -8,10 +8,14 @@ import {MdSection} from '../beans/md-section';
 })
 export class SectionHttpDataService {
 
+  private hostUrl = 'https://raw.githubusercontent.com/vacantthinker-serverdata/spring-boot-angular-blog-data/master';
+  // private hostUrl = 'http://localhost:8080';
+  // private hostUrl = '';
+
   /**
    * /api/md
    */
-  private apiName = '/api/md';
+  private apiName = `${this.hostUrl}/api/md`;
   /**
    * /json_
    */
@@ -19,7 +23,7 @@ export class SectionHttpDataService {
   /**
    * /contents
    */
-  private mdUrl =  `${this.apiName}/contents`;
+  private mdUrl = `${this.apiName}/contents`;
 
   /**
    * md_section
@@ -55,7 +59,7 @@ export class SectionHttpDataService {
   /**
    * get section item-array .
    * @param section eg: angular, css, ...
-   * @return MdSectionSet
+   * @return MdSectionSet [ng-1, ng-2, ng-3, ]
    */
   getMdSectionSet(section: string): Observable<Set<string>> {
     if (section) {
