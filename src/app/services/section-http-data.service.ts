@@ -8,7 +8,9 @@ import {MdSection} from '../beans/md-section';
 })
 export class SectionHttpDataService {
 
-  private hostUrl = 'https://raw.githubusercontent.com/vacantthinker-serverdata/spring-boot-angular-blog-data/master';
+  // /api/md/json_/md_section.json
+  private hostUrl = 'https://gitee.com/ll-serverdata/spring-boot-angular-blog-data/raw/master';
+  // private hostUrl = 'https://raw.githubusercontent.com/vacantthinker-serverdata/spring-boot-angular-blog-data/master';
   // private hostUrl = 'http://localhost:8080';
   // private hostUrl = '';
 
