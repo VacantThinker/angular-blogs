@@ -9,10 +9,10 @@ import {MdSection} from '../beans/md-section';
 export class SectionHttpDataService {
 
   // /api/md/json_/md_section.json
-  // private hostUrl = 'https://gitee.com/ll-serverdata/spring-boot-angular-blog-data/raw/master';
+  private hostUrl = 'https://gitee.com/ll-serverdata/spring-boot-angular-blog-data/raw/master';
   // private hostUrl = 'https://raw.githubusercontent.com/vacantthinker-serverdata/spring-boot-angular-blog-data/master';
   // private hostUrl = 'http://localhost:8080';
-  private hostUrl = '';
+  // private hostUrl = '';
 
   /**
    * /api/md
@@ -53,7 +53,7 @@ export class SectionHttpDataService {
       if (mdTitle) {
         const url = `${this.mdUrl}/${sectName}/${mdTitle}${this.suffixMd}`; // url=/contents/sectName/mdTitle.md
         // console.log('getMdContent\n' + url);
-        return this.http.get<string>(url, {responseType: 'text' as 'json'});
+        return this.http.get<string>(url, {headers: { 'Access-Control-Allow-Origin': '*' }, responseType: 'text' as 'json'});
       }
     }
   }
@@ -66,7 +66,7 @@ export class SectionHttpDataService {
   getMdSectionSet(section: string): Observable<Set<string>> {
     if (section) {
       const url = `${this.jsonUrl}/${this.section}/${section}${this.suffixJson}`; // url=/json_/md_section/sectionXXX.json
-      return this.http.get<Set<string>>(url);
+      return this.http.get<Set<string>>(url, {headers: { 'Access-Control-Allow-Origin': '*' }});
     }
   }
 
@@ -76,7 +76,7 @@ export class SectionHttpDataService {
    */
   getMdBeanSet(): Observable<Set<MdSection>> {
     const url = `${this.jsonUrl}/${this.section}${this.suffixJson}`; // url=/api/md/json_/md_section.json
-    return this.http.get<Set<MdSection>>(url);
+    return this.http.get<Set<MdSection>>(url, {headers: { 'Access-Control-Allow-Origin': '*' }});
   }
 
 }
