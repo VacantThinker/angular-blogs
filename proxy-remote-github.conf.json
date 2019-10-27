@@ -1,6 +1,6 @@
 {
   "/api/md": {
-    "target": "https://raw.githubusercontent.com/vacantthinker-serverdata/spring-boot-angular-blog-data/master",
+    "target": "https://raw.githubusercontent.com/vacantthinker/spring-boot-angular-blog-data/master",
     "secure": false,
     "pathRewrite": {
       "^/api/md": "/api/md"

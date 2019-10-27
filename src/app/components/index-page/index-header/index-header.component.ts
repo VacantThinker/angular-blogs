@@ -1,5 +1,5 @@
 import {AfterViewInit, ChangeDetectorRef, Component, OnInit} from '@angular/core';
-import {BeanRoute} from '../../../beans/bean-route';
+import {BeanRoute} from '../../../models/bean-route';
 import {IndexLoadMessageService} from '../../../services/index-load-message.service';
 
 @Component({

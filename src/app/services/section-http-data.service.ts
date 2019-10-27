@@ -1,7 +1,7 @@
 import {Injectable} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {Observable} from 'rxjs';
-import {MdSection} from '../beans/md-section';
+import {MdSection} from '../models/md-section';
 
 @Injectable({
   providedIn: 'root'
@@ -10,7 +10,7 @@ export class SectionHttpDataService {
 
   // /api/md/json_/md_section.json
   // private hostUrl = 'https://gitee.com/ll-serverdata/spring-boot-angular-blog-data/raw/master';
-  private hostUrl = 'https://raw.githubusercontent.com/vacantthinker-serverdata/spring-boot-angular-blog-data/master';
+  private hostUrl = 'https://raw.githubusercontent.com/vacantthinker/spring-boot-angular-blog-data/master';
   // private hostUrl = 'http://localhost:8080';
   // private hostUrl = '';
 

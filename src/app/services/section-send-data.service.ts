@@ -1,4 +1,4 @@
-import {MdSection} from '../beans/md-section';
+import {MdSection} from '../models/md-section';
 import {Injectable} from '@angular/core';
 import {BehaviorSubject} from 'rxjs';
 

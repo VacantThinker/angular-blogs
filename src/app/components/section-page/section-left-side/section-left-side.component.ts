@@ -1,5 +1,5 @@
 import {AfterViewInit, ChangeDetectorRef, Component, OnInit} from '@angular/core';
-import {MdSection} from '../../../beans/md-section';
+import {MdSection} from '../../../models/md-section';
 import {SectionSendDataService} from '../../../services/section-send-data.service';
 import {SectionHttpDataService} from '../../../services/section-http-data.service';
 import {IndexLoadMessageService} from '../../../services/index-load-message.service';
