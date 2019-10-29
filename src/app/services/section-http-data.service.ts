@@ -1,16 +1,16 @@
-import {Injectable} from '@angular/core';
-import {HttpClient} from '@angular/common/http';
-import {Observable} from 'rxjs';
-import {MdSection} from '../models/md-section';
+import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
+import { MdSection } from '../models/md-section';
 
 @Injectable({
   providedIn: 'root'
 })
 export class SectionHttpDataService {
-
   // /api/md/json_/md_section.json
   // private hostUrl = 'https://gitee.com/ll-serverdata/spring-boot-angular-blog-data/raw/master';
-  private hostUrl = 'https://raw.githubusercontent.com/vacantthinker/spring-boot-angular-blog-data/master';
+  // private hostUrl = 'https://raw.githubusercontent.com/vacantthinker/spring-boot-angular-blog-data/master';
+  private hostUrl = 'https://ll-express-angular-blog-data.herokuapp.com';
   // private hostUrl = 'http://localhost:8080';
   // private hostUrl = '';
 
@@ -42,10 +42,10 @@ export class SectionHttpDataService {
   // private suffixList = '.list';
   // private sprit = '/';
 
-  constructor( // the service, dont execute ngOnInit() method.
-    private http: HttpClient,
-  ) {
-  }
+  constructor(
+    // the service, dont execute ngOnInit() method.
+    private http: HttpClient
+  ) {}
 
   // https://raw.githubusercontent.com/vt-server-data/angular-blog-data/master/contents/angular/property-x-is-.md
   getMdContent(sectName: string, mdTitle: string): Observable<string> {
@@ -53,7 +53,7 @@ export class SectionHttpDataService {
       if (mdTitle) {
         const url = `${this.mdUrl}/${sectName}/${mdTitle}${this.suffixMd}`; // url=/contents/sectName/mdTitle.md
         // console.log('getMdContent\n' + url);
-        return this.http.get<string>(url, {responseType: 'text' as 'json'});
+        return this.http.get<string>(url, { responseType: 'text' as 'json' });
       }
     }
   }
@@ -78,5 +78,4 @@ export class SectionHttpDataService {
     const url = `${this.jsonUrl}/${this.section}${this.suffixJson}`; // url=/api/md/json_/md_section.json
     return this.http.get<Set<MdSection>>(url);
   }
-
 }
